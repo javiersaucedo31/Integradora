@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100vh;
+    height: 100vh;
+}
+/* Estilos para la barra de inicio */
+.navbar {
+    display: flex;
+    background: linear-gradient(to right, #151414, #3f3f3f);
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+}
+/* Estilos para los enlaces de navegación */
+.navbar a {
+    font-size: 0.9rem;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+/* Cambia el color al pasar el ratón */
+
+/* Estilos del logotipo o nombre de la página */
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 7rem;
+}
+
+/* .navbar .signin:hover,.navbar .signup:hover{
+    background-color: rgb(94, 92, 92);
+    color: rgba(236, 236, 242, 0.896);
+    border-radius: 10%;
+    transition: width 1s, background-color 1s,color 1s,border-radius 0.3s;
+    cursor: pointer;
+} */
+ .navbar a:hover{
+    background: linear-gradient(to right, #535353,#017188);
+    color: rgba(236, 236, 242, 0.896);
+    border-radius: 10%;
+    transition: width 1s, color 1s,border-radius 0.1s,background-position 0.5s ease-in-out;
+    cursor: pointer;
+ }
+ .navbar .logo:hover{
+    background: #151414;
+ }
+.navbar .inicio{
+    margin-left: 35rem;
+}
+.navbar .signin {
+    margin-left: 2rem; /* Empuja los enlaces hacia la derecha */
+}
+.navbar .signup{
+    margin-left: 2rem;
+}
+
+.login-container{
+    width: 100%; 
+    max-width: 500px; 
+    min-width: 300px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;;
+    box-sizing: border-box;
+    padding: 80px 40px;
+    position: relative;
+    left: 65vh;
+    top: 25vh
+    
+

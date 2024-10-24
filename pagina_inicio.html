@@ -5,34 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppiumBank - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="script.js" defer></script>
+    
 
 </head>
 <body>
-    <div class="navbar">
-        <a href="#" class="logo">APPIUMBANK</a>
-        <a href="#Inicio" class="inicio">Inicio</a>
-        <a href="#aboutus" class="sobren">Sobre nosotros</a>
-        <a href="#login" class="signin">Sign In</a>
-        <a href="#register" class="signup">Sign Up</a>
-    </div>
-
-    <div class="login-container" style="display: block">
-
-    <div id="form-login" style="display: block;">
-        <h2>Iniciar Sesion</h2>
-    <form action="login" method="POST">
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required>
+    <div class="cointainer">
+        <div class="navbar">
+            <a href="#" class="logo">AppiumBanK</a>
+            <a href="#" class="inicio" onclick="loadView('pagina_inicio.html')"><i class="bi bi-house"></i>&nbsp;&nbsp;Inicio</a>
+            <a href="#" class="sobren" onclick="openModal()"><i class="bi bi-question-circle-fill"></i>&nbsp;&nbsp;Sobre nosotros</a>
+            <a href="#" class="signin" onclick="loadView('signin.html')"><i class="bi bi-person-fill-check"></i>&nbsp;&nbsp;Sign In</a>
+            <a href="#" class="signup" onclick="loadView('register.html')"><i class="bi bi-person-fill-add"></i>&nbsp;&nbsp;Sign Up</a>
+        </div>
     
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+    
+        <div id="aboutUsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h4>Sobre Nosotros</h4>
+            <p>En <strong>AppiumBank</strong>, nuestra misión es ofrecer soluciones financieras innovadoras que empoderen a nuestros clientes a alcanzar sus objetivos. Desde nuestra fundación en 1980, hemos crecido hasta convertirnos en una institución financiera de renombre.</p>
+    
+            <h5>Nuestros Valores</h5>
+            <ul>
+                <li><strong>Transparencia:</strong> Priorizamos la claridad en cada transacción.</li>
+                <li><strong>Innovación:</strong> Nos mantenemos a la vanguardia de las tecnologías financieras.</li>
+                <li><strong>Compromiso con el Cliente:</strong> Nuestro éxito está vinculado al de nuestros clientes.</li>
+            </ul>
+    
+            <h5 >Compromiso Social</h5>
+            <p>Nos esforzamos por hacer una diferencia positiva en nuestras comunidades, apoyando iniciativas de sostenibilidad y educación financiera.</p>
+    
+            <h5>Equipo Directivo</h5>
+            <p>Nuestro equipo directivo está compuesto por líderes experimentados en el sector financiero, con más de 30 años de trayectoria.</p>
+        </div>
+        </div>
+    
     
         
-        <hr>
-            
-        <button type="submit">Ingresar</button>
-    </form>
+        <div id="main-content">
+    
+        <div class="imagen">
+            <img class="principal" src="imagen/fondo.jpg" alt="Imagen principal">
+        
+        </div>
+    
+        <section class="bienvenida">
+            <H1>APPIUM <br> <span class="eslogan">Cuentas que crecen contigo</span> </H1>
+            <!-- <img src="imagen/segunda-seccion.jpg" alt="imagen para seccion"> -->
+            <article>
+                <p class="bienvenido"><i class="bi bi-info-circle-fill"></i>&nbsp;Bienvenido a AppiumBank, donde su seguridad financiera es nuestra prioridad. Nos comprometemos a ofrecerle soluciones bancarias innovadoras y personalizadas que se adapten a sus necesidades. Con un enfoque en la transparencia y la atención al cliente, trabajamos cada día para brindarle la confianza y el soporte que merece en su viaje financiero. Descubra cómo nuestros productos y servicios pueden ayudarle a alcanzar sus objetivos económicos con la tranquilidad que solo un banco de confianza puede ofrecer.&nbsp;<i class="bi bi-info-circle-fill"></i></p>
+            </article>
+    
+        </section>
+        <h2>¡CONOCE NUESTROS BENEFICIOS!</h2>
+        <div class="beneficios">
+            <section class="seguridad">
+                <img src="imagen/seguridad.jpg" alt="Imagen seguridad">
+                <p class="seguridad-confianza"><span class="encabezados">Seguridad y Confianza</span><br><br>Nuestro banco ofrece sistemas de seguridad avanzados que protegen tus finanzas y datos personales, garantizando que tus transacciones estén siempre seguras.</p>
+            </section>
+            <section class="atencion">
+                <img src="imagen/atencion.jpg" alt="imagen atencion">
+                <p class="atencion-personalizada">
+                    <span class="encabezados">Atención Personalizada</span><br><br> Ofrecemos un servicio al cliente dedicado, con asesores expertos listos para brindarte soluciones financieras personalizadas que se adapten a tus necesidades.
+                </p>
+            </section>
+            <section class="soluciones">
+                <img class="imagen-solucion" src="imagen/soluciones.jpg" alt="imagen soluciones">
+                <p class="soluciones-digitales">
+                    <span class="encabezados">Acceso a Soluciones Digitales</span><br> <br> Con nuestra plataforma en línea y aplicación móvil, puedes gestionar tus cuentas, hacer transferencias y monitorear tus finanzas en cualquier momento y desde cualquier lugar, con total comodidad.
+                </p>
+            </section>
+        </div>
+        <section class="servicios-destacados">
+            <h3>DESCUBRE NUESTROS SERVICIOS MAS DESTACADOS <BR> 
+            ¿Que puedo hacer?</BR></h3>
+            <div class="servicios">
+                <article class="transferencia">
+                     transferencia <br> <span class="t"><i class="bi bi-arrow-left-right"></i></span>
+                </article>
+                <article class="retiro">
+                    App disponible <br> <span class="r"><i class="bi bi-phone"></i></span>
+                </article>
+                <article class="pago">
+                    Informacion de tu perfil <br> <span class="p"><i class="bi bi-credit-card"></i></span>
+                </article>
+                <article class="consulta">
+                    Consulta de saldo <br> <span class="cons"><i class="bi bi-wallet"></i></span>
+                </article>
+                <article class="historial">
+                    historial de movimientos <br> <span class="h"><i class="bi bi-clock-history"></i></span>
+                </article>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section about">
+                <h5>AppiumBank</h5>
+                <p>Tu seguridad y confianza son nuestra prioridad. Estamos aquí para ofrecerte los mejores servicios financieros.</p>
+              </div>
+          
+              <div class="footer-section links">
+                <h6>Enlaces</h6>
+                <ul>
+                  <li><a href="#">Fundadores: <br> Victor <br> javier <br> nairobi <br> diego </a></li>
+                 
+                  <li><a href="#">Contacto</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-section contact">
+                <h6>Contáctanos</h6>
+                <p>Email: @APIUM.com</p>
+                <p>Teléfono: +52 8712349602</p>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2024 AppiumBank. Todos los derechos reservados.</p>
+            </div>
+          </footer>
+        </div>
     </div>
+    
+    <!-- <script>
+        // Cargar la vista inicial
+        loadView('pagina_inicio.html');
+    </script> -->
+<!-- </main> -->
 
     
 </body>

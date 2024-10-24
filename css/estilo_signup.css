@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Contenedor general */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem auto;
+}
+
+/* Estilos del formulario */
+.form-register {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(10%); /* Inicia fuera de la pantalla */
+    transition: transform 2s ease-out; /* Transición para la animación */
+    opacity: 1; /* Inicia invisible */
+    margin: 0 auto;
+    z-index: 10;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Mostrar el formulario con la animación */
+.form-register.show {
+    transform: translateY(0); /* Mover hacia arriba */
+    opacity: 1; /* Mostrarlo */
+    transition: transform 1s ease-out, opacity 0.5s ease-out; /* Animación suave */
+}
+
+/* Estilo para el título */
+.form-register h4 {
+    text-align: center;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+.form-register label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #151515;
+}
+
+/* Estilo de los campos de texto */
+.form-register input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo del botón */
+.form-register button {
+    width: 100%;
+    padding: 10px;
+    background-color: #060606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hover del botón */
+.form-register button:hover {
+    background-color: #282727;
+    color: #ffffff;
+}
+
+/* Línea de separación */
+.form-register hr {
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+    .register-container {
+        padding: 10px; /* Más padding en pantallas pequeñas */
+    }
+
+    .register-form {
+        max-width: 100%;
+        width: 100%; /* Asegurarse de que el formulario ocupe todo el ancho disponible */
+    }
+
+    .register-form h4 {
+        font-size: 1.2rem; /* Ajustar el tamaño del título */
+    }
+
+    .register-form input {
+        padding: 8px;
+        font-size: 1rem; /* Reducir el tamaño del texto para móviles */
+    }
+
+    .register-form button {
+        padding: 12px;
+        font-size: 1rem; /* Ajustar el tamaño del botón */
+    }
+}
+ .register-container img{
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+a .sobren{
+    display: none;
+}

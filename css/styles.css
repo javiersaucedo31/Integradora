@@ -33,7 +33,7 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-radius 0.5s,transform 1s;
 }
 
 /* Estilos del logotipo o nombre de la página */
@@ -45,16 +45,18 @@ body {
 }
 
  .navbar a:hover{
-    background: linear-gradient(to right, #343434,#525252);
+    background: linear-gradient(to right, #4a4a4a,#4a4a4a);
     color: rgba(236, 236, 242, 0.896);
-    border-radius: 10%;
-    transition: width 1s, color 1s,border-radius 0.1s,background-position 0.5s ease-in-out;
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: width 1s, color 1s,border-radius 0.5s,background-position 0.5s, transform 1s ease-in-out;
     cursor: pointer;
  }
  .navbar .logo:hover{
-    background: #151414;
+    background: #121212;
  }
- 
+
+
 
 .navbar .inicio{
     margin-left: 15rem;
@@ -338,10 +340,10 @@ h3{
     border-radius: 8px;
 }
 footer {
-    background-color: #f0eeee; /* Fondo blanco */
+    background-color: #867f7f; /* Fondo blanco */
     color: #000000; /* Texto negro */
     padding: 20px 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     border-top: 2px solid #444; /* Bordes ligeros para darle más estructura */
   }
@@ -369,7 +371,7 @@ footer {
   
   .footer-section p,
   .footer-section a {
-    color: #333333; /* Texto ligeramente gris */
+    color: #020202; /* Texto ligeramente gris */
     text-decoration: none;
     margin: 5px 0;
   }
@@ -380,7 +382,7 @@ footer {
   
   .footer-bottom {
     padding: 10px;
-    background-color: #f1f1f1; /* Ligero gris para diferenciar el área inferior */
+    background-color: #717171; /* Ligero gris para diferenciar el área inferior */
     color: #333333;
     border-top: 1px solid #cccccc;
   }
@@ -390,7 +392,7 @@ footer {
     font-size: 14px;
   }
   
-  @media (max-width: 768px) {
+  @media  (max-width: 768px) {
     .footer-content {
       flex-direction: column;
       align-items: center;
@@ -400,3 +402,60 @@ footer {
       text-align: center;
     }
   }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: block;
+        position: absolute;
+        color: white;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-links.show {
+        display: flex;
+        
+    }
+    
+}
+
+ 

@@ -1,7 +1,7 @@
 function loadView(view) {
     const mainContent = document.getElementById('main-content');
 
-    // Usar fetch para cargar el contenido del archivo HTML
+   
     fetch(view)
         .then(response => {
             if (!response.ok) {
@@ -10,7 +10,7 @@ function loadView(view) {
             return response.text();
         })
         .then(data => {
-            mainContent.innerHTML = data; // Cargar el contenido en el main-content
+            mainContent.innerHTML = data; 
         })
         .catch(error => {
             mainContent.innerHTML = `<p>Error al cargar la vista: ${error.message}</p>`;
@@ -38,10 +38,10 @@ function openModal() {
 
  function showLoginForm() {
     const loginForm = document.getElementById('form-login');
-    loginForm.classList.add('show'); // Añade la clase 'show' para desplegar el formulario
+    loginForm.classList.add('show'); 
 }
 
-// Llamamos a la función cuando cargue la página
+
 document.addEventListener("DOMContentLoaded", function() {
     showLoginForm();
 });       
@@ -49,7 +49,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function prevenirsubmitdef(e){
     e.preventDefault();
-}
+
+    console.log("hola");
+};
+
+const hoy = new Date().toISOString().split('T')[0];
+        document.getElementById("fecha_nac").setAttribute("max", hoy);
+
+        function calcularEdad(fechaNacimiento) {
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            let edad = hoy.getFullYear() - nacimiento.getFullYear();
+            const mes = hoy.getMonth() - nacimiento.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                edad--;
+            }
+            return edad;
+        }
+
+        // Validación cuando se intenta enviar el formulario
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            const fechaNacimiento = document.getElementById('fecha_nac').value;
+            const edad = calcularEdad(fechaNacimiento);
+
+            if (edad < 18) {
+                event.preventDefault();  // Evita que el formulario se envíe
+                alert("Debes tener al menos 18 años para registrarte.");
+            } else {
+                alert("Formulario enviado con éxito");
+            }
+        });
 
 
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }     
    

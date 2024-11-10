@@ -11,13 +11,17 @@
 
 </head>
 <body>
-    <div class="cointainer">
+    <div id="main-content">
+    
         <div class="navbar">
-            <a href="#" class="logo">AppiumBanK</a>
-            <a href="#" class="inicio" onclick="loadView('pagina_inicio.html')"><i class="bi bi-house"></i>&nbsp;&nbsp;Inicio</a>
-            <a href="#" class="sobren" onclick="openModal()"><i class="bi bi-question-circle-fill"></i>&nbsp;&nbsp;Sobre nosotros</a>
-            <a href="#" class="signin" onclick="loadView('signin.html')"><i class="bi bi-person-fill-check"></i>&nbsp;&nbsp;Sign In</a>
-            <a href="#" class="signup" onclick="loadView('register.html')"><i class="bi bi-person-fill-add"></i>&nbsp;&nbsp;Sign Up</a>
+            <a href="#" class="logo" onclick="loadView('pagina_inicio.html')">AppiumBanK</a>
+            <button class="burger-menu" onclick="toggleMenu()">☰ menu</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="inicio" onclick="loadView('pagina_inicio.html')"> Inicio</a></li>
+                <li><a href="#" class="sobren" onclick="openModal()"> Sobre nosotros</a></li>
+                <li><a href="#" class="signin" onclick="loadView('signin.html')"> Iniciar sesión</a></li>
+                <li><a href="#" class="signup" onclick="loadView('register_html.php')"> Registro</a></li>
+            </ul>
         </div>
     
     
@@ -44,7 +48,7 @@
     
     
         
-        <div id="main-content">
+        
     
         <div class="imagen">
             <img class="principal" src="imagen/fondo.jpg" alt="Imagen principal">
@@ -53,7 +57,7 @@
     
         <section class="bienvenida">
             <H1>APPIUM <br> <span class="eslogan">Cuentas que crecen contigo</span> </H1>
-            <!-- <img src="imagen/segunda-seccion.jpg" alt="imagen para seccion"> -->
+           
             <article>
                 <p class="bienvenido"><i class="bi bi-info-circle-fill"></i>&nbsp;Bienvenido a AppiumBank, donde su seguridad financiera es nuestra prioridad. Nos comprometemos a ofrecerle soluciones bancarias innovadoras y personalizadas que se adapten a sus necesidades. Con un enfoque en la transparencia y la atención al cliente, trabajamos cada día para brindarle la confianza y el soporte que merece en su viaje financiero. Descubra cómo nuestros productos y servicios pueden ayudarle a alcanzar sus objetivos económicos con la tranquilidad que solo un banco de confianza puede ofrecer.&nbsp;<i class="bi bi-info-circle-fill"></i></p>
             </article>
@@ -125,15 +129,15 @@
               <p>&copy; 2024 AppiumBank. Todos los derechos reservados.</p>
             </div>
           </footer>
-        </div>
-    </div>
-    
-    <!-- <script>
+     </div>
+
+    <script src="script.js" ></script>
+    <script>
         // Cargar la vista inicial
         loadView('pagina_inicio.html');
     </script> -->
-<!-- </main> -->
-
+<!-- </main>
+ 
     
 </body>
 </html>

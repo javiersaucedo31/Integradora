@@ -277,6 +277,7 @@ img{
     color: #121212;
     margin-left: 50px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .informacion-adicional section {
@@ -364,8 +365,8 @@ h1{
     font-family:Georgia, 'Times New Roman', Times, serif;
     width: 100%;
     padding: 10px;
-    background-color: #121212;
-    color: white;
+    background-color: #05c625;
+    color: rgb(4, 4, 4);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -373,8 +374,8 @@ h1{
 }
 
 .operation-form button:hover {
-    background-color: #ffff;
-    color: #121212;
+    background-color: #08e42d;
+    color: black;
 }
 
 h2{
@@ -395,22 +396,25 @@ h2{
 .boton-cerrarsesion:hover {
     background-color: darkred; /* Cambiar color al pasar el cursor */
 }
- 
+
+
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: rows;
         align-items: flex-start;
         padding: 15px;
     }
 
     .navbar .logo {
+        font-size: 0.9rem;
         left: 0;
         margin-right: 0;
+       
     }
 
     .navbar .perf, .historial-movimientos {
-        left: 0;
-        font-size: 0.9rem;
+        font-size: 0.6rem;
+        left: 10px;
     }
 
     .informacion-Cuenta {
@@ -423,11 +427,25 @@ h2{
     .credit-card {
         width: 100%;
         max-width: none;
-        height: auto;
+        height: 170px;
     }
 
     .informacion-adicional {
         margin-left: 0;
         width: 100%;
+    }
+    .modal-contenido {
+        width: 80%; /* Aumenta el ancho del modal en pantallas pequeñas */
+        max-width: 90%;
+        height: auto;
+        margin: 5rem auto;
+        padding: 1.5rem;
+    }
+    .saldo{
+        width: 60%;
+    }
+    .credit-card .network-logo {
+        width: 30px;
+        height: 10px;
     }
 }

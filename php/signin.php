@@ -53,12 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             // Contraseña incorrecta
-            header("Location: /integradora/signin.html?mensaje=" . urlencode("Contraseña incorrecta."));
+            header("Location: /integradora/signin.html" );
             exit();
         }
     } else {
         // Usuario no encontrado
-        header("Location: /integradora/signin.html?mensaje=" . urlencode("El usuario no está registrado."));
+        header("Location: /integradora/register_html.php");
         exit();
     }
 

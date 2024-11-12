@@ -333,6 +333,10 @@ h3{
     .navbar .logo {
         font-size: 1rem; /* Reduce el tamaño del logo */
     }
+    .seguridad:hover,.atencion:hover,.soluciones:hover{
+        transform: scale(0.9);
+        transition: transform 2s;
+    }
 }
 .beneficios img {
     width: 100%;
@@ -409,7 +413,7 @@ footer {
 }
 
 .nav-links li {
-    margin-left: 1.5rem;
+    margin-left: 8px;
 }
 
 .nav-links a {
@@ -420,8 +424,11 @@ footer {
     align-items: center;
 }
 
+/* Estilos del botón menú (burger-menu) */
 .burger-menu {
     display: none;
+    position: absolute;
+    right: 20px;
     font-size: 1.5rem;
     background: none;
     border: none;
@@ -429,33 +436,61 @@ footer {
     cursor: pointer;
 }
 
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .burger-menu {
         display: block;
     }
-    
+    .navbar .logo{
+        margin-left: 2rem;
+    }
+
     .nav-links {
-        display: block;
-        position: absolute;
-        color: white;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
+        display: none;
+        position: fixed; /* Fijamos el menú para un mejor comportamiento */
+        top: 40px; /* Ajusta la posición debajo de la barra de navegación */
+        right: 10px; /* Ajusta la distancia del borde derecho */
+        background-color: #121212a0;
+        width: 250px; /* Ajusta el ancho del panel */
+        flex-direction: column; /* Formato columna */
+        align-items: flex-start;
+        padding: 20px ;
+        border-radius: 10px; /* Bordes redondeados para un mejor diseño */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para mejor visibilidad */
+        z-index: 1000;
+       
     }
-    
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-    
+
     .nav-links.show {
         display: flex;
-        
     }
-    
+
+    .nav-links li {
+        font-size: 1rem; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+      
+    }
+
+    .nav-links a {
+        padding: 2 auto;
+        width: 100%;
+    }
+    a:hover{
+        background-color: #12121279;
+    }
+
+    a .inicio{
+        display: none;
+    }
+    .nav-links li.s{
+        margin-left: 24px;
+    }
 }
+
+
+ 
+
+
+
+  
 
  

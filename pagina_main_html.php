@@ -55,7 +55,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido-Appium</title>
-    <link rel="stylesheet" href="css/estyle_pagmain.css">
+    <link rel="stylesheet" href="css/estyle_pagmain.css?v=1.2">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="js/main.js"></script>
    
@@ -136,12 +136,12 @@ $conn->close();
 
          <h2>Realiza tu operación</h2>
 
-         <form class="operation-form" action="procesar_transferencia.php" method="POST">
+         <form class="operation-form" action="php/transaccion.php" method="POST">
             <label for="cuenta-destino">Ingresa Destinatario:</label>
            <input type="text" name="cuenta-destino" id="cuenta-destino" required>
 
            <label for="monto">Ingresa el monto:</label>
-           <input type="text" name="monto" id="monto" required>
+           <input type="number" step="0.01" name="monto" id="monto" required>
 
            <button type="submit">Realizar Operación</button>
          </form>

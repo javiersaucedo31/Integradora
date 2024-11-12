@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/estilo_signup.css">
+    <script src="/script.js" defer></script>
     
-     <script src="script.js" defer></script>
 </head>
 <body>
 
-        <div class="navbar">
+    <div id="main-content">
+    <div class="navbar">
             <a href="#" class="logo" onclick="loadView('pagina_inicio.html')">AppiumBanK</a>
-            <button class="burger-menu" onclick="toggleMenu()">☰ menu</button>
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" class="inicio" onclick="loadView('pagina_inicio.html')"> Inicio</a></li>
-                
                 <li><a href="#" class="signin" onclick="loadView('signin.html')"> Iniciar sesión</a></li>
                 <li><a href="#" class="signup" onclick="loadView('register_html.php')"> Registro</a></li>
             </ul>
@@ -67,15 +67,9 @@
             </div>
         </div>
     </div>
-    
-   
-       
+    </div>
 
 
-
-
-
-   <script src="js/register.js" ></script>
     
 </body>
 </html>

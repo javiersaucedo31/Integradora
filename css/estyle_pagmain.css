@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(192, 203, 203);
+    background-color: white;
     width: 100%;
 }
 .navbar {
@@ -14,7 +14,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 6px 15px;
     z-index: 1000;
     padding-left: 20px;
     flex-wrap: nowrap;
@@ -27,7 +27,7 @@ body{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 12px 15px;
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s, transform 1s,border-radius 0.5s;
@@ -220,7 +220,7 @@ img{
     transition: transform 2s;
 }
 .credit-card:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: transform 2s;
 }
 
@@ -317,12 +317,12 @@ h1{
     width: 8rem;
     margin: 0 auto;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: 16px;
     transition: transform 1s;
 }
 .transferir:hover{
-    background-color: #fff;
-    color: #121212;
+    background-color: #545252;
+    color: #efeeee;
     border: 2px groove ;
     border-radius: 8px;
     transform: scale(1.2);
@@ -366,7 +366,7 @@ h1{
     width: 100%;
     padding: 10px;
     background-color: #05c625;
-    color: rgb(4, 4, 4);
+    color: rgb(234, 232, 232);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -375,7 +375,7 @@ h1{
 
 .operation-form button:hover {
     background-color: #08e42d;
-    color: black;
+    color: rgb(231, 226, 226);
 }
 
 h2{
@@ -391,14 +391,17 @@ h2{
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    margin: 20px auto; /* Centra horizontalmente el botón */
+    display: block; /* Asegura que el botón ocupe toda la línea */
+    text-align: center; 
 }
 
 .boton-cerrarsesion:hover {
-    background-color: darkred; /* Cambiar color al pasar el cursor */
+    background-color: darkred; 
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 586px) {
     .navbar {
         flex-direction: rows;
         align-items: flex-start;
@@ -448,4 +451,173 @@ h2{
         width: 30px;
         height: 10px;
     }
+}
+@media screen and (min-width: 587px) and (max-width: 995px) {
+    .navbar {
+        flex-direction: rows;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+        left: 1rem;
+        margin-right: 1rem;
+       
+    }
+
+    .navbar .perf, .historial-movimientos {
+        font-size: 0.9rem;
+        left: 5rem;
+    }
+
+    .informacion-Cuenta {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .credit-card {
+        width: 70%;
+        max-width: none;
+        height: 170px;
+    }
+
+    .informacion-adicional {
+        margin-left: 0;
+        width: 100%;
+    }
+    .modal-contenido {
+        width: 80%; /* Aumenta el ancho del modal en pantallas pequeñas */
+        max-width: 90%;
+        height: auto;
+        margin: 5rem auto;
+        padding: 1.5rem;
+    }
+    .saldo{
+        width: 60%;
+    }
+    .credit-card .network-logo {
+        width: 30px;
+        height: 10px;
+    }
+}
+.guardar-contacto {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.guardar-contacto label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.guardar-contacto input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.guardar-contacto input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.guardar-contacto button {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    background-color: #05c625;
+    color: rgb(247, 245, 245);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.guardar-contacto button:hover {
+    background-color: #08e42d;
+    color: rgb(238, 238, 238);
+}
+.boton-alternar {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#456879 ; /* Color verde */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-alternar:hover {
+    background-color: #49abd2; /* Un poco más oscuro en hover */
+    transform: scale(1.05);
+}
+
+.boton-alternar:active {
+    background-color: #252625; /* Un poco más oscuro cuando se presiona */
+    transform: scale(1);
+}
+
+.boton-alternar:focus {
+    outline: none;
+    background-color: #49abd2; 
+    box-shadow: 0px 0px 5px 3px rgba(72, 202, 228, 0.6); /* Efecto de foco */
+}
+
+.tabla-movimientos {
+    width: 50%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #efe5e5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de la tabla */
+.tabla-movimientos thead tr {
+    background-color: #009879;
+    color: #0a0a0a;
+    text-align: left;
+}
+
+.tabla-movimientos th,
+.tabla-movimientos td {
+    color: black;
+    padding: 12px 15px;
+}
+
+/* Estilo de las filas */
+.tabla-movimientos tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Efecto hover para las filas */
+.tabla-movimientos tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Última fila */
+.tabla-movimientos tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.navbar .bk{
+    color: #5b5a5a;
 }

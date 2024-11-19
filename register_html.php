@@ -4,36 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=2.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/estilo_signup.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="css/estilo_signup.css?v=2.3">
+    <script src="script.js?v=10.0" defer></script>
     
 </head>
 <body>
 
     <div id="main-content">
-    <div class="navbar">
-            <a href="#" class="logo" onclick="loadView('pagina_inicio.html')">AppiumBanK</a>
+        <div class="navbar">
+            <a href="#" class="logo" onclick="loadView('pagina_inicio.html')">Appium<span class="bk">BanK</span></a>
             <button class="burger-menu" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" class="inicio" onclick="loadView('pagina_inicio.html')"> Inicio</a></li>
-                <li><a href="#" class="signin" onclick="loadView('signin.html')"> Iniciar sesión</a></li>
+                <li><a href="#" class="signin" onclick="loadView('signin_html.php')"> Iniciar sesión</a></li>
                 <li><a href="#" class="signup" onclick="loadView('register_html.php')"> Registro</a></li>
             </ul>
         </div>
 
 
     
-    <div id="contenido-registro">
-        <div class="register-container">
-            <img src="imagen/fondo.jpg" alt="signin">
-            <div id="form-register" class="form-register">
+        <div id="contenido-registro">
+            <div class="register-container">
+                 <video autoplay loop muted playsinline class="mi-video" >
+                    <source src="imagen/3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                 </video>   
+
+               
+                <div id="form-register" class="form-register">
                 <h4>Regístrate</h4>
                 <?php
                     if (isset($_GET['mensaje'])) {
                         $mensaje = htmlspecialchars($_GET['mensaje']);
-                        echo "<div id='mensaje'>" . $mensaje . "</div>";
+                        echo "<div id='mensaje' class='mensaje-rojo'>" . $mensaje . "</div>";
                     }
                 ?>
 
@@ -62,11 +66,10 @@
                     <hr>
                     <button type="submit">Registrar</button>
                 </form>
-                <!-- Contenedor para mensajes de error o éxito -->
-                <div id="mensaje" style="color: red; margin-top: 10px;"></div>
+                </div>
+                
             </div>
         </div>
-    </div>
     </div>
 
 

@@ -8,7 +8,8 @@ session_start();
 
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['username'])) {
-    header("Location: /integradora/signin.html?mensaje=" . urlencode("Por favor, inicia sesión primero."));
+    $_SESSION['error'] = "Inicia sesion primero";
+    header("Location: /integradora/signin_html.php");
     exit();
 }
 
@@ -33,7 +34,8 @@ $monto = floatval($_POST['monto']);
 $id_operacion = 1;
 
 if ($monto <= 0) {
-    header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("El monto debe ser mayor a cero."));
+    $_SESSION['error'] = "El monto debe ser mayor a 0";
+    header("Location: /integradora/pagina_main_html.php");
     exit();
 }
 
@@ -59,12 +61,14 @@ if ($result_origen->num_rows > 0) {
     $saldo_origen = $origen['saldo'];
 
     if ($cuenta_destino == $numero_cuenta_origen) {
-        header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("No puedes transferir fondos a la misma cuenta."));
+        $_SESSION['error'] = "No puedes transferir a tu misma cuenta";
+        header("Location: /integradora/pagina_main_html.php");
         exit();
     }
 
     if ($saldo_origen < $monto) {
-        header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("Saldo insuficiente."));
+        $_SESSION['error'] = "Saldo insuficiente";
+        header("Location: /integradora/pagina_main_html.php");
         exit();
     }
 
@@ -115,6 +119,7 @@ if ($result_origen->num_rows > 0) {
 
             // Confirmar la transacción
             $conn->commit();
+            $_SESSION['success'] = "Transferencia realizada con exito";
             header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("Transferencia realizada con éxito."));
         } catch (Exception $e) {
             // Revertir cambios si hubo un error
@@ -122,7 +127,8 @@ if ($result_origen->num_rows > 0) {
             header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("Error al realizar la transferencia: " . $e->getMessage()));
         }
     } else {
-        header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("La cuenta destino no existe: $cuenta_destino"));
+        $_SESSION['error'] = "La cuenta a la que quieres transferir no existe";
+        header("Location: /integradora/pagina_main_html.php");
     }
 } else {
     header("Location: /integradora/pagina_main_html.php?mensaje=" . urlencode("No se pudo obtener los datos de la cuenta de origen."));

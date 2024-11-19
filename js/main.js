@@ -45,7 +45,21 @@ function closeModal2() {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-         }     
+         } 
+        
+         
+         function mostrarFormulario(formularioId) {
+            // Ocultar ambos formularios
+            document.getElementById('guardar_contacto').style.display = 'none';
+            document.getElementById('operation_form').style.display = 'none';
+        
+            // Mostrar el formulario seleccionado
+            document.getElementById(formularioId).style.display = 'block';
+        } 
+
+        function llenarCuentaDestino(selectElement) {
+            document.getElementById('cuenta-destino').value = selectElement.value;
+        }
          
 
          

@@ -14,15 +14,28 @@
     margin: 2rem auto;
 }
 
+.mi-video {
+    position: absolute; /* Posiciona el video detrás */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0; /* Video detrás de todo */
+    pointer-events: none;
+}
+
+
 /* Estilos del formulario */
 .form-register {
-    background-color: #ffffff;
+    position: relative;
+    background-color: #ffffffbd;
     border-radius: 10px;
     padding: 20px;
     max-width: 400px;
     width: 100%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(10%); /* Inicia fuera de la pantalla */
+    transform: translateY(-2%); /* Inicia fuera de la pantalla */
     transition: transform 2s ease-out; /* Transición para la animación */
     opacity: 1; /* Inicia invisible */
     margin: 0 auto;
@@ -120,4 +133,9 @@
 }
 a .sobren{
     display: none;
+}
+.mensaje-rojo {
+    color: red;
+    font-weight: bold; /* Opcional: para destacar el mensaje */
+    font-size: 1.2em; /* Opcional: para hacerlo un poco más grande */
 }
